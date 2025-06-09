@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  z-index: 20;
   padding: 1.6rem 0;
 
   &-nav {
@@ -123,13 +124,14 @@
 
     &-mobile {
       position: absolute;
+      z-index: 20;
       display: none;
       width: 100%;
       right: 0;
       top: 100%;
       padding: 3.2rem 1.6rem;
       min-height: calc(100vh - 8rem);
-
+      background-color: #101212;
       opacity: 0;
       pointer-events: none;
       transition: 0.4s ease-in-out;

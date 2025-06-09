@@ -68,7 +68,6 @@ export default class Application {
             t.loadMore();
             this.showLoaderOnClick();
             this.linkListener();
-            this.mainProductTrigger();
             const form = new FormHandler('.form-js');
             const slick = new Slick();
             slick.gallerySliderRefresh();
