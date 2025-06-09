@@ -1,7 +1,10 @@
 html {
   font-size: 10px;
   @media (max-width: 1200px) {
-    font-size: 9px;
+    //font-size: 9px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
   }
 }
 
@@ -171,5 +174,14 @@ input[type="checkbox"]:checked {
   overflow: hidden;
   @media (max-width: 360px) {
     transform: scale(0.9);
+  }
+}
+
+.container{
+  width: 100%;
+  max-width: 154.4rem;
+  margin: 0 auto;
+  @media (max-width: 1600px) {
+    padding: 0 1.6rem;
   }
 }

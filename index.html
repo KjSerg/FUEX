@@ -13,7 +13,64 @@
     <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
-<main class="content"></main>
+<header class="header">
+    <div class="container">
+        <div class="header-container">
+            <a href="#" class="logo header__logo"><img src="img/logo.svg" alt=""></a>
+            <nav class="header-nav header-nav--desktop">
+                <ul>
+                    <li><a href="#">Spot trading</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">My profile</a>
+                        <ul>
+                            <li><a href="#">Account information</a></li>
+                            <li><a href="#">Wallet</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-controls header-controls--desktop">
+                <a href="#" class="button header__button">
+                    Log in
+                </a>
+                <a href="#" class="button button--green header__button">
+                    Registration
+                </a>
+            </div>
+            <a href="#" class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+    </div>
+    <div class="header-container-mobile">
+        <nav class="header-nav ">
+            <ul>
+                <li><a href="#">Spot trading</a></li>
+                <li class="menu-item-has-children">
+                    <a href="#">My profile</a>
+                    <ul>
+                        <li><a href="#">Account information</a></li>
+                        <li><a href="#">Wallet</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-controls ">
+            <a href="#" class="button header__button">
+                Log in
+            </a>
+            <a href="#" class="button button--green header__button">
+                Registration
+            </a>
+        </div>
+    </div>
+</header>
+<main class="content">
+
+</main>
 <script>
     var adminAjax = admin_ajax = '';
 </script>
