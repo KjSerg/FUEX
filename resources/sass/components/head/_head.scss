@@ -28,7 +28,8 @@
         &:nth-child(1){
           left: 0;
           width: 132.9rem;
-          height: 90rem;
+          height: 104.2rem;
+          //transform: translateX(-30rem)  translateY(-50%);
           @media (max-width: 1024px) {
 
             width: 100%;

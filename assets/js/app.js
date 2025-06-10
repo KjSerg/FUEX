@@ -24359,8 +24359,11 @@ var Application = /*#__PURE__*/function () {
   return _createClass(Application, [{
     key: "init",
     value: function init() {
+      var t = this;
       this.initBrowserAttributes();
       this.initComponents();
+      $(document).ready(t.setRowsItemContentHeight);
+      $(window).on('resize', t.setRowsItemContentHeight);
     }
   }, {
     key: "showLoaderOnClick",
@@ -24386,6 +24389,30 @@ var Application = /*#__PURE__*/function () {
         _this.$body.attr("data-screen-position", attr);
         _this.$body.attr("data-mobile", _utils_helpers__WEBPACK_IMPORTED_MODULE_0__.isMobile ? "mobile" : '');
       });
+    }
+  }, {
+    key: "setRowsItemContentHeight",
+    value: function setRowsItemContentHeight() {
+      var $el = $('.advantages-item-content');
+      if ($(window).width() <= 1023) {
+        $el.removeAttr('style');
+        return;
+      }
+      var maxHeight = 0;
+
+      // Скидаємо попередні висоти
+      $el.css('height', 'auto');
+
+      // Знаходимо максимальну висоту
+      $el.each(function () {
+        var height = $(this).outerHeight();
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+
+      // Встановлюємо максимальну висоту
+      $el.css('min-height', maxHeight);
     }
   }, {
     key: "initComponents",

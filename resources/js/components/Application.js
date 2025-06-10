@@ -20,8 +20,11 @@ export default class Application {
     }
 
     init() {
+        const t = this;
         this.initBrowserAttributes();
         this.initComponents();
+        $(document).ready(t.setRowsItemContentHeight);
+        $(window).on('resize', t.setRowsItemContentHeight);
     }
 
     showLoaderOnClick() {
@@ -48,6 +51,30 @@ export default class Application {
             this.$body.attr("data-screen-position", attr);
             this.$body.attr("data-mobile", isMobile ? "mobile" : '');
         });
+    }
+
+
+    setRowsItemContentHeight() {
+        const $el = $('.advantages-item-content');
+        if($(window).width() <= 1023) {
+            $el.removeAttr('style');
+            return;
+        }
+        var maxHeight = 0;
+
+        // Скидаємо попередні висоти
+        $el.css('height', 'auto');
+
+        // Знаходимо максимальну висоту
+        $el.each(function () {
+            var height = $(this).outerHeight();
+            if (height > maxHeight) {
+                maxHeight = height;
+            }
+        });
+
+        // Встановлюємо максимальну висоту
+        $el.css('min-height', maxHeight);
     }
 
 

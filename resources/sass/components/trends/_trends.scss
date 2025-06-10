@@ -1,0 +1,12 @@
+.trends{
+  &-row{
+    display: flex;
+    gap: 1.6rem;
+  }
+  &-table{
+    width: 102.4rem;
+    table {
+      width: 100%;
+    }
+  }
+}

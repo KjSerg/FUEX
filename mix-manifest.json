@@ -1,13 +1,18 @@
 {
     "/assets/js/app.js": "/assets/js/app.js",
     "/assets/css/app.css": "/assets/css/app.css",
+    "/img/advantages-img1.png": "/img/advantages-img1.png",
+    "/img/advantages-img2.png": "/img/advantages-img2.png",
+    "/img/advantages-img3.png": "/img/advantages-img3.png",
     "/img/arr-top.svg": "/img/arr-top.svg",
     "/img/button-red.svg": "/img/button-red.svg",
+    "/img/crypto-text.svg": "/img/crypto-text.svg",
+    "/img/gradient.png": "/img/gradient.png",
+    "/img/gradient1.png": "/img/gradient1.png",
+    "/img/gradient2.png": "/img/gradient2.png",
     "/img/headimg.svg": "/img/headimg.svg",
     "/img/logo.svg": "/img/logo.svg",
-    "/img/gradient.png": "/img/gradient.png",
     "/img/stars.png": "/img/stars.png",
-    "/img/crypto-text.svg": "/img/crypto-text.svg",
-    "/img/gradient1.png": "/img/gradient1.png",
-    "/img/gradient2.png": "/img/gradient2.png"
+    "/img/search.svg": "/img/search.svg",
+    "/img/gradient11.png": "/img/gradient11.png"
 }
