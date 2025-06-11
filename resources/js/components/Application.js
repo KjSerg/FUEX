@@ -77,6 +77,20 @@ export default class Application {
         $el.css('min-height', maxHeight);
     }
 
+    trendsTableFormInit(){
+        $(document).on('click','.trends-table-search:not(.active)', function () {
+           $(this).addClass('active');
+           $(this).find('input').focus();
+        });
+        $(document).mouseup( function(e){
+            var div = $( ".trends-table-search" );
+            if ( !div.is(e.target)
+                && div.has(e.target).length === 0 ) {
+                div.removeClass('active');
+            }
+        });
+    }
+
 
     initComponents() {
         let t = this;
@@ -93,6 +107,7 @@ export default class Application {
             tabs();
             copyLink();
             t.loadMore();
+            t.trendsTableFormInit();
             this.showLoaderOnClick();
             this.linkListener();
             const form = new FormHandler('.form-js');

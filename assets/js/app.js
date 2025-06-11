@@ -24415,6 +24415,20 @@ var Application = /*#__PURE__*/function () {
       $el.css('min-height', maxHeight);
     }
   }, {
+    key: "trendsTableFormInit",
+    value: function trendsTableFormInit() {
+      $(document).on('click', '.trends-table-search:not(.active)', function () {
+        $(this).addClass('active');
+        $(this).find('input').focus();
+      });
+      $(document).mouseup(function (e) {
+        var div = $(".trends-table-search");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          div.removeClass('active');
+        }
+      });
+    }
+  }, {
     key: "initComponents",
     value: function initComponents() {
       var _this2 = this;
@@ -24431,6 +24445,7 @@ var Application = /*#__PURE__*/function () {
         (0,_ui_tabs__WEBPACK_IMPORTED_MODULE_9__.tabs)();
         (0,_ui_copy_link__WEBPACK_IMPORTED_MODULE_11__.copyLink)();
         t.loadMore();
+        t.trendsTableFormInit();
         _this2.showLoaderOnClick();
         _this2.linkListener();
         var form = new _forms_FormHandler__WEBPACK_IMPORTED_MODULE_7__["default"]('.form-js');
@@ -24945,21 +24960,6 @@ var tabs = function tabs() {
     $section.find('.tab-content').not($element).removeClass('active');
     if (isShowed) return;
     $element.addClass('active');
-  });
-  $(document).on('click', '.row-tab-head', function (e) {
-    e.preventDefault();
-    var $i = $(this);
-    if ($i.hasClass('active')) return;
-    var href = $i.attr('href');
-    if (href === undefined) return;
-    var $el = $(document).find(href);
-    if ($el.length === 0) return;
-    var $head = $i.closest('section').find('.row-tab-head');
-    $head.removeClass('active');
-    $i.addClass('active');
-    var index = $el.index();
-    var transformX = index * 100;
-    $i.closest('section').find('.row-tab-content').css('transform', 'translateX(-' + transformX + '%)');
   });
 };
 

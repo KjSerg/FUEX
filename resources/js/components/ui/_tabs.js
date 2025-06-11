@@ -16,19 +16,4 @@ export const tabs = () => {
         if (isShowed) return;
         $element.addClass('active');
     });
-    $(document).on('click', '.row-tab-head', function (e) {
-        e.preventDefault();
-        const $i = $(this);
-        if($i.hasClass('active')) return;
-        const href = $i.attr('href');
-        if (href === undefined) return;
-        const $el = $(document).find(href);
-        if($el.length === 0) return;
-        const $head = $i.closest('section').find('.row-tab-head');
-        $head.removeClass('active');
-        $i.addClass('active');
-        const index = $el.index();
-        let transformX = index * 100;
-        $i.closest('section').find('.row-tab-content').css('transform', 'translateX(-' + transformX + '%)');
-    });
 }
