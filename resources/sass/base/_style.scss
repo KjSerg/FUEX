@@ -188,6 +188,12 @@ input[type="checkbox"]:checked {
 
 .section{
   position: relative;
+  &-stars-bg{
+    background-image: url(../../img/stars.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   &-padding{
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -231,5 +237,20 @@ input[type="checkbox"]:checked {
   line-height: 114%;
   @media (max-width: 450px) {
     font-size: 2.4rem;
+  }
+}
+
+.text{
+  color: #A9ACAC;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 165%;
+  @media (max-width: 450px) {
+    font-size: 1.4rem;
+  }
+  & > *:not(:last-child){
+    margin-bottom: 1.6rem;
   }
 }

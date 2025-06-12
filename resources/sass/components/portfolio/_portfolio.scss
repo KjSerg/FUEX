@@ -1,0 +1,101 @@
+.portfolio{
+  &-head{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.2rem;
+    &__item{
+      gap: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.7rem 2.4rem;
+      border-bottom: 1px solid rgba( #27EC98, 0);
+      transition: 0.4s ease-in-out;
+
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+
+        svg {
+          path {
+            transition: 0.4s ease-in-out;
+            fill: #A9ACAC;
+          }
+        }
+      }
+
+      &:hover {
+
+        border-bottom: 1px solid rgba(#27EC98, 1);
+      }
+
+      &.active {
+        color: #27EC98;
+        border-bottom: 1px solid rgba(#27EC98, 1);
+
+        .icon {
+          svg {
+            path {
+              fill: #27EC98;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-content{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-coin{
+    display: flex;
+    width: 30rem;
+    padding: 1.6rem 3.2rem;
+    align-items: center;
+    gap: 1.2rem;
+    border: 1px solid #282929;
+    background: #161818;
+    &__price{
+      display: flex;
+      gap: 1.2rem;
+      color:#A9ACAC;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 168%;
+      .plus{
+        color: #27EC98;
+      }
+      .minus{
+        color: #ED3C56;
+      }
+    }
+    &__title{
+      margin-bottom: 4px;
+      color:  #FFF;
+      font-family: "Exo 2", sans-serif;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 122%;
+    }
+    &__image{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 5rem;
+      height: 5rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+  }
+}

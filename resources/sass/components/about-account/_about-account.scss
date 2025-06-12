@@ -1,0 +1,32 @@
+.about-account {
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76.4rem;
+    height: 57.2rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    @media (max-width: 1400px) {
+      width: 60rem;
+      height: 40rem;
+    }
+    @media (max-width: 767px) {
+      width: auto;
+      height: auto;
+      aspect-ratio: 34/25;
+    }
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    @media (max-width: 1400px) {
+      gap: 4rem;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column; gap: 2.4rem;
+    }
+  }
+}

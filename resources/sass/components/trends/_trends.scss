@@ -2,6 +2,10 @@
   &-row {
     display: flex;
     gap: 1.6rem;
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &-tabs {
@@ -18,23 +22,40 @@
       font-weight: 400;
       line-height: 165%;
       text-align: center;
+      @media (max-width: 450px) {
+        font-size: 1.4rem;
+      }
+      @media (max-width: 400px) {
+        overflow: auto;
+      }
       &-column {
         width: 33.3%;
         padding: 1.6rem 0.8rem;
         vertical-align: middle;
-
+        @media (max-width: 450px) {
+          padding: 1.2rem 0.8rem;
+        }
         &:first-child {
           padding-left: 1.6rem;
+          @media (max-width: 450px) {
+            padding-left: 1.4rem;
+          }
         }
 
         &:last-child {
           padding-right: 1.6rem;
+          @media (max-width: 450px) {
+            padding-right: 1.4rem;
+          }
         }
       }
 
       &-row {
         display: flex;
         align-items: center;
+        @media (max-width: 400px) {
+          min-width: 400px;
+        }
         &:not(:last-child){
           border-bottom: 1px solid  #282929;
         }
@@ -99,12 +120,27 @@
 
     &-container {
       width: calc(100% - 104rem);
+      @media (max-width: 1500px) {
+        width: 38%;
+      }
+      @media (max-width: 1200px) {
+        width: 100%;
+        max-width: 50.4rem;
+      }
     }
   }
 
   &-table {
     width: 102.4rem;
-
+    @media (max-width: 1500px) {
+      width: 60%;
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      overflow: auto;
+    }
     &-button-container {
       display: flex;
       justify-content: flex-end;
@@ -130,11 +166,17 @@
       font-weight: 400;
       line-height: 168%;
       text-align: left;
-
+      @media (max-width: 450px) {
+        font-size: 1.3rem;
+      }
       strong {
         display: block;
         font-size: 1.6rem;
         color: #fff;
+
+        @media (max-width: 450px) {
+          font-size: 1.4rem;
+        }
       }
 
       &__image {
@@ -145,7 +187,10 @@
         height: 5rem;
         flex-shrink: 0;
         flex-grow: 0;
-
+        @media (max-width: 450px) {
+          width: 3rem;
+          height: 3rem;
+        }
       }
     }
 
@@ -156,7 +201,39 @@
       width: 9rem;
       height: 100%;
       transition: 0.2s ease-in-out;
-
+      @media (max-width: 450px) {
+        display: none;
+      }
+      &-head{
+        width: 100%;
+        display: none;
+        padding: 1rem 1.6rem;
+        border: 1px solid #282929;
+        background: #161818;
+        label{
+          display: block;
+          width: calc(100% - 3rem);
+        }
+        input{
+          border: none;
+          background: none ;
+          color: #fff;
+        }
+        button{
+          width: 2.4rem;
+          height: 2.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: none;
+          border: none;
+        }
+        @media (max-width: 450px) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
       button {
         position: absolute;
         display: flex;
@@ -214,17 +291,25 @@
 
     table {
       width: 100%;
-
+      @media (max-width: 767px) {
+        min-width: 768px;
+      }
       th, td {
         padding: 1.6rem 0.8rem;
         vertical-align: middle;
 
         &:first-child {
           padding-left: 1.6rem;
+          @media (max-width: 450px) {
+            padding-left: 1.4rem;
+          }
         }
 
         &:last-child {
           padding-right: 1.6rem;
+          @media (max-width: 450px) {
+            padding-right: 1.4rem;
+          }
         }
       }
 
@@ -238,6 +323,12 @@
         font-weight: 500;
         line-height: 122%;
         text-align: left;
+        @media (max-width: 1500px) {
+          font-size: 1.4rem;
+        }
+        @media (max-width: 450px) {
+          font-size: 1.6rem;
+        }
       }
 
       tbody {
@@ -249,6 +340,9 @@
         font-style: normal;
         font-weight: 400;
         line-height: 165%;
+        @media (max-width: 1500px) {
+          font-size: 1.4rem;
+        }
 
         tr {
           border-bottom: 1px solid #282929;

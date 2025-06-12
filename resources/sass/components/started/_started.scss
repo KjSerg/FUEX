@@ -1,0 +1,99 @@
+.started {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.8rem;
+    @media (max-width: 1200px) {
+      gap: 3.2rem;
+    }
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    &-item {
+      position: relative;
+      padding-top: 3.2rem;
+      padding-bottom: 1.6rem;
+      width: calc(33.3% - 3.2rem);
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #282929;
+      opacity: 0.6;
+      transition: 0.4s ease-in-out;
+      @media (max-width: 1024px) {
+        width: calc(50% - 1.6rem);
+        opacity: 1;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        background: #27EC98;
+        width: 0;
+        height: 1px;
+        top: -1px;
+        left: 0;
+        transition: 0.4s ease-in-out;
+
+      }
+
+      &:hover {
+        opacity: 1;
+
+        &:after {
+          width: 20rem;
+        }
+      }
+
+      &__link {
+        display: inline-flex;
+        margin-top: auto;
+        color: #27EC98;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 122%;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &__text {
+        padding-bottom: 2.4rem;
+        color: #A9ACAC;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 165%;
+        @media (max-width: 450px) {
+          font-size: 1.4rem;
+        }
+      }
+
+      &__title {
+        margin-bottom: 1.6rem;
+        color: #FFF;
+        font-family: "Exo 2", sans-serif;
+        font-size: 2.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        @media (max-width: 450px) {
+          font-size: 1.6rem;
+        }
+
+        span {
+          display: inline-block;
+          margin-right: 0.8rem;
+          color: #27EC98;
+        }
+      }
+    }
+  }
+}
